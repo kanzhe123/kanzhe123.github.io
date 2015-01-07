@@ -350,7 +350,7 @@ hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网
 
 <p><code>注意：</code>Hexo有两个_config.yml文件，一个在根目录，一个在theme下，此时修改的是在根目录下的。<br>好了，编译生成再重启本地服务预览，不错吧…</p>
 <h1 id="GitHub_托管项目"><strong>GitHub 托管项目</strong></h1>
-<p>不能满足于本地查看，show出来大家看看；这里介绍的是GitHub托管，你也可以尝试<a href="https://gitcafe.com/" target="_blank" rel="external">gitcafe</a>,可以参考<a href="http://zipperary.com/2013/11/23/hexo-to-gitcafe/" target="_blank" rel="external">zipperary</a></p>
+<p>不能满足于本地查看，show出来大家看看。这里介绍的是GitHub托管，你也可以尝试<a href="https://gitcafe.com/" target="_blank" rel="external">gitcafe</a>,可以参考<a href="http://zipperary.com/2013/11/23/hexo-to-gitcafe/" target="_blank" rel="external">zipperary</a></p>
 <p><strong>GitHub上建立Repository</strong><br>登录后系统，在github首页，点击页面右下角「New Repository」<br><img src="http://ww4.sinaimg.cn/large/7bab94ddgw1eo18cmdx1mj20kz076jsc.jpg" alt="New Repository"><br>填写项目信息：<br>project name：kanzhe123.github.io<br>description： Hlwang`s Blog<br>点击「Create Repository」 完成创建。<br>推荐：<a href="http://pchou.info/web-build/2013/01/05/build-github-blog-page-02.html" target="_blank" rel="external">一步步在GitHub上创建博客主页(2)</a></p>
 <p><strong>Hexo配置github</strong><br>修改Hexo目录下的config.yml配置文件中的deploy</p>
 <figure class="highlight code"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="class"><span class="keyword">type</span>: <span class="title">github</span></span></div><div class="line">  repository: https:<span class="comment">//github.com/kanzhe123/kanzhe123.github.io.git</span></div><div class="line">  branch: master</div></pre></td></tr></table></figure>
