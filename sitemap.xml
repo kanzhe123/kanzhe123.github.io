@@ -2,18 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://kanzhe123.github.io/2015/01/18/target/</loc>
+    <lastmod>2015-03-21T06:23:26.543Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kanzhe123.github.io/2015/01/06/HexoCreate/</loc>
-    <lastmod>2015-01-07T13:22:58.000Z</lastmod>
+    <lastmod>2015-01-07T13:22:58.299Z</lastmod>
   </url>
   
   <url>
     <loc>http://kanzhe123.github.io/2015/01/06/welcome/</loc>
-    <lastmod>2015-01-06T07:57:15.000Z</lastmod>
+    <lastmod>2015-01-06T07:57:15.791Z</lastmod>
   </url>
   
   <url>
     <loc>http://kanzhe123.github.io/2015/01/06/hello-world/</loc>
-    <lastmod>2015-01-06T07:57:11.000Z</lastmod>
+    <lastmod>2015-01-06T07:57:11.460Z</lastmod>
   </url>
   
 </urlset>

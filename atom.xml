@@ -4,7 +4,7 @@
   <subtitle><![CDATA[似山脚达酪迩...]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://kanzhe123.github.io/"/>
-  <updated>2015-01-07T13:23:03.815Z</updated>
+  <updated>2015-03-21T06:25:33.552Z</updated>
   <id>http://kanzhe123.github.io/</id>
   
   <author>
@@ -15,11 +15,86 @@
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[新的一年（2015年）]]></title>
+    <link href="http://kanzhe123.github.io/2015/01/18/target/"/>
+    <id>http://kanzhe123.github.io/2015/01/18/target/</id>
+    <published>2015-01-18T10:11:25.000Z</published>
+    <updated>2015-03-21T06:23:26.543Z</updated>
+    <content type="html"><![CDATA[<h1 id="2014~2015"><strong>2014~2015</strong></h1>
+<p><img src="http://ww4.sinaimg.cn/large/005yyi5Jjw1eoduu103imj30j50d6dhh.jpg" alt="2014~2015"><br>2014已经走了有一段时间了，以前都没有怎么总结、规划过，过的浑浑噩噩的；那就从现在开始吧…<br>好像到了一年的结尾大家都会对自己过去的一年做一些回顾或总结，问问自己这一年都做了什么？收获了什么？是否达到你设定的目标？对于过去的一年你是否满意……..<br><a id="more"></a></p>
+<h2 id="“回顾2014”">“回顾2014”</h2>
+<p>“收获”、”责任”、”迷茫”,2014年六个字应该差不多了吧!</p>
+<p><strong>收获</strong>：买了房子、谈了恋爱、有了正式的工作…<br><strong>责任</strong>：房贷、工作、学习、家人…<br><strong>迷茫</strong>：感觉现在的生活不是自己想要的，工作过于单调，不想就这样过完人生的头三十年…</p>
+<h2 id="“2015年需要做的事”">“2015年需要做的事”</h2>
+<ul>
+<li>上半年把车学了</li>
+<li>工作中要积极主动，学习、交流、问…</li>
+<li>坚持晚上睡觉前读书，即使现在没有这样的好习惯：习惯的力量、自控力、深入浅出Node.js（后续会更新）</li>
+<li>寻找自己的价值所在，规划一下自我；</li>
+<li>照顾好我爱、爱我的人、强健体魄…</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="2014~2015"><strong>2014~2015</strong></h1>
+<p><img src="http://ww4.sinaimg.cn/large/005yyi5Jjw1eoduu103imj30j50d6dhh.jpg" alt="2014~2015"><br>2014已经走了有一段时间了，以前都没有怎么总结、规划过，过的浑浑噩噩的；那就从现在开始吧…<br>好像到了一年的结尾大家都会对自己过去的一年做一些回顾或总结，问问自己这一年都做了什么？收获了什么？是否达到你设定的目标？对于过去的一年你是否满意……..<br>]]>
+    
+    </summary>
+    
+      <category term="规划" scheme="http://kanzhe123.github.io/tags/%E8%A7%84%E5%88%92/"/>
+    
+      <category term="闲扯" scheme="http://kanzhe123.github.io/tags/%E9%97%B2%E6%89%AF/"/>
+    
+      <category term="生活类" scheme="http://kanzhe123.github.io/categories/%E7%94%9F%E6%B4%BB%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://kanzhe123.github.io/2015/01/06/hello-world/"/>
+    <id>http://kanzhe123.github.io/2015/01/06/hello-world/</id>
+    <published>2015-01-06T07:44:53.000Z</published>
+    <updated>2015-01-06T07:57:11.460Z</updated>
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2>
+<h3 id="Create_a_new_post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a><br><a id="more"></a></p>
+<h3 id="Run_server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2>
+<h3 id="Create_a_new_post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a><br>]]>
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://kanzhe123.github.io/tags/hexo/"/>
+    
+      <category term="技术类" scheme="http://kanzhe123.github.io/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[黑客哦（Hexo）--创建个人博客]]></title>
     <link href="http://kanzhe123.github.io/2015/01/06/HexoCreate/"/>
     <id>http://kanzhe123.github.io/2015/01/06/HexoCreate/</id>
     <published>2015-01-06T07:44:53.000Z</published>
-    <updated>2015-01-07T13:22:58.000Z</updated>
+    <updated>2015-01-07T13:22:58.299Z</updated>
     <content type="html"><![CDATA[<h1 id="hexo是什么"><strong>hexo是什么</strong></h1>
 <p><a href="http://hexo.io/" target="_blank" rel="external">hexo</a>是一个基于<a href="http://nodejs.org/" target="_blank" rel="external">Node.js</a>的静态博客程序，可以方便的生成静态网页托管在<a href="https://github.com/" target="_blank" rel="external">github</a>和<a href="https://www.heroku.com/" target="_blank" rel="external">Heroku</a>上。作者是来自台湾的<a href="https://github.com/hexojs/hexo" target="_blank" rel="external">@tommy351</a>。引用<a href="https://github.com/hexojs/hexo" target="_blank" rel="external">@tommy351</a>的话，hexo：</p>
 <blockquote>
@@ -159,52 +234,11 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <link href="http://kanzhe123.github.io/2015/01/06/hello-world/"/>
-    <id>http://kanzhe123.github.io/2015/01/06/hello-world/</id>
-    <published>2015-01-06T07:44:53.000Z</published>
-    <updated>2015-01-06T07:57:11.000Z</updated>
-    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a><br><a id="more"></a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a><br>]]>
-    
-    </summary>
-    
-      <category term="hexo" scheme="http://kanzhe123.github.io/tags/hexo/"/>
-    
-      <category term="技术类" scheme="http://kanzhe123.github.io/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/"/>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[心情激动，献上处女作]]></title>
     <link href="http://kanzhe123.github.io/2015/01/06/welcome/"/>
     <id>http://kanzhe123.github.io/2015/01/06/welcome/</id>
     <published>2015-01-06T02:40:53.000Z</published>
-    <updated>2015-01-06T07:57:15.000Z</updated>
+    <updated>2015-01-06T07:57:15.791Z</updated>
     <content type="html"><![CDATA[<p>一直有想自己建个自己的博客的<code>雄心</code>，总是没有合适的契机、胆子也小、找不到合适的<code>小苹果</code>…总结一个字：不会搞…<br>昨天，在一个机缘巧合的机会让我看到了<a href="http://litten.github.io/" target="_blank" rel="external">@litten</a>的博客，我靠靠…这不就是我想要的滑板鞋嘛…<br><a id="more"></a><br>下午捣鼓了一下午，研究GitHub(还是不太了解)、了解Hexo（就知道<code>hexo init、hexo generate、hexo server...</code>）、试着使用<a href="http://www.jianshu.com/p/q81RER" target="_blank" rel="external">Markdown</a> N多问题整不明白，还好旁边做了个看起来挺牛逼的家伙<a href="http://yywang.info/" target="_blank" rel="external">@yywang</a>，早晨过来三下五除二你看的Hlwang闪亮登场了,内心还是很激昂的，迫不及待、洋洋洒洒的献出了我的第一次…o(∩_∩)o </p>
 <h2 id="关于鄙人">关于鄙人</h2>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> hlwang = {</div><div class="line">  nickName  : <span class="string">"呆子、黑人..."</span>,</div><div class="line">  birthday : <span class="string">"1990-05-10"</span>,</div><div class="line">  hobby : <span class="string">"篮球"</span></div><div class="line">  e_mail : <span class="string">"kanzhe123@126.com"</span>,</div><div class="line">  site : <span class="string">"http://kanzhe123.github.io/"</span></div><div class="line">}</div></pre></td></tr></table></figure>
