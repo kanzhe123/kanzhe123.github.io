@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://kanzhe123.github.io/2015/03/28/Singleton/</loc>
+    <lastmod>2015-03-30T08:09:05.150Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kanzhe123.github.io/2015/03/28/constructed/</loc>
+    <lastmod>2015-03-30T08:00:36.093Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kanzhe123.github.io/2015/03/29/BuilderPattern/</loc>
+    <lastmod>2015-03-30T08:00:34.079Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kanzhe123.github.io/2015/03/10/reprint%20/</loc>
     <lastmod>2015-03-26T03:45:51.093Z</lastmod>
   </url>

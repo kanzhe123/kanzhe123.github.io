@@ -3,21 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>新的一年（2015年） | Hlwang</title>
+  <title>JavaScript设计模式——构造函数模式 | Hlwang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2014~2015
-2014已经走了有一段时间了，以前都没有怎么总结、规划过，过的浑浑噩噩的；那就从现在开始吧…好像到了一年的结尾大家都会对自己过去的一年做一些回顾或总结，问问自己这一年都做了什么？收获了什么？是否达到你设定的目标？对于过去的一年你是否满意……..">
+  <meta name="description" content="构造函数用于创建特定类型的对象——不仅声明了使用的对象，构造函数还可以接受参数以便第一次创建对象的时候设置对象的成员值。你可以自定义自己的构造函数，然后在里面声明自定义类型对象的属性或方法。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="新的一年（2015年）">
-<meta property="og:url" content="http://kanzhe123.github.io/2015/01/18/target/">
+<meta property="og:title" content="JavaScript设计模式——构造函数模式">
+<meta property="og:url" content="http://kanzhe123.github.io/2015/03/28/constructed/">
 <meta property="og:site_name" content="Hlwang">
-<meta property="og:description" content="2014~2015
-2014已经走了有一段时间了，以前都没有怎么总结、规划过，过的浑浑噩噩的；那就从现在开始吧…好像到了一年的结尾大家都会对自己过去的一年做一些回顾或总结，问问自己这一年都做了什么？收获了什么？是否达到你设定的目标？对于过去的一年你是否满意……..">
-<meta property="og:image" content="http://ww4.sinaimg.cn/large/005yyi5Jjw1eoduu103imj30j50d6dhh.jpg">
+<meta property="og:description" content="构造函数用于创建特定类型的对象——不仅声明了使用的对象，构造函数还可以接受参数以便第一次创建对象的时候设置对象的成员值。你可以自定义自己的构造函数，然后在里面声明自定义类型对象的属性或方法。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="新的一年（2015年）">
-<meta name="twitter:description" content="2014~2015
-2014已经走了有一段时间了，以前都没有怎么总结、规划过，过的浑浑噩噩的；那就从现在开始吧…好像到了一年的结尾大家都会对自己过去的一年做一些回顾或总结，问问自己这一年都做了什么？收获了什么？是否达到你设定的目标？对于过去的一年你是否满意……..">
+<meta name="twitter:title" content="JavaScript设计模式——构造函数模式">
+<meta name="twitter:description" content="构造函数用于创建特定类型的对象——不仅声明了使用的对象，构造函数还可以接受参数以便第一次创建对象的时候设置对象的成员值。你可以自定义自己的构造函数，然后在里面声明自定义类型对象的属性或方法。">
 
   
     <link rel="alternative" href="/atom.xml" title="Hlwang" type="application/atom+xml">
@@ -191,19 +187,19 @@
 		</header>				
 	</div>
 </nav>
-      <article id="post-target" class="article article-type-post" itemscope itemprop="blogPost">
+      <article id="post-constructed" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/01/18/target/" class="article-date">
-  	<time datetime="2015-01-18T10:11:25.000Z" itemprop="datePublished">Jan 18 2015</time>
+      <a href="/2015/03/28/constructed/" class="article-date">
+  	<time datetime="2015-03-28T14:25:53.000Z" itemprop="datePublished">Mar 28 2015</time>
 </a>
       
   <div class="article-category">
-    <a class="article-category-link" href="/categories/生活类/">生活类</a>
+    <a class="article-category-link" href="/categories/技术类/">技术类</a>
   </div>
 
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/规划/">规划</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闲扯/">闲扯</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
 
     </div>
   
@@ -216,7 +212,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      新的一年（2015年）
+      JavaScript设计模式——构造函数模式
     </h1>
   
 
@@ -224,19 +220,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="2014~2015"><strong>2014~2015</strong></h1>
-<p><img src="http://ww4.sinaimg.cn/large/005yyi5Jjw1eoduu103imj30j50d6dhh.jpg" alt="2014~2015"><br>2014已经走了有一段时间了，以前都没有怎么总结、规划过，过的浑浑噩噩的；那就从现在开始吧…<br>好像到了一年的结尾大家都会对自己过去的一年做一些回顾或总结，问问自己这一年都做了什么？收获了什么？是否达到你设定的目标？对于过去的一年你是否满意……..<br><a id="more"></a></p>
-<h2 id="“回顾2014”">“回顾2014”</h2>
-<p>“收获”、”责任”、”迷茫”,2014年六个字应该差不多了吧!</p>
-<p><strong>收获</strong>：买了房子、谈了恋爱、有了正式的工作…<br><strong>责任</strong>：房贷、工作、学习、家人…<br><strong>迷茫</strong>：感觉现在的生活不是自己想要的，工作过于单调，不想就这样过完人生的头三十年…</p>
-<h2 id="“2015年需要做的事”">“2015年需要做的事”</h2>
-<ul>
-<li>上半年把车学了</li>
-<li>工作中要积极主动，学习、交流、问…</li>
-<li>坚持晚上睡觉前读书，即使现在没有这样的好习惯：习惯的力量、自控力、深入浅出Node.js（后续会更新）</li>
-<li>寻找自己的价值所在，规划一下自我；</li>
-<li>照顾好我爱、爱我的人、强健体魄…</li>
-</ul>
+        <p>构造函数用于创建特定类型的对象——不仅声明了使用的对象，构造函数还可以接受参数以便第一次创建对象的时候设置对象的成员值。你可以自定义自己的构造函数，然后在里面声明自定义类型对象的属性或方法。<br><a id="more"></a></p>
+<h2 id="实例">实例</h2>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Car</span><span class="params">(model, year, miles)</span> </span>{</div><div class="line">    <span class="keyword">this</span>.model = model;</div><div class="line">    <span class="keyword">this</span>.year = year;</div><div class="line">    <span class="keyword">this</span>.miles = miles;</div><div class="line">    <span class="keyword">this</span>.output: <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'hello world'</span>);</div><div class="line">    }</div><div class="line">    <span class="comment">//首先是使用继承很麻烦了，其次output()在每次创建对象的时候都重新定义了，最好的方法是让所有Car类型的实例都共享这个output()方法，这样如果有大批量的实例的话，就会节约很多内存。(建议使用原型链)</span></div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line">注意：这里我们使用了Object.prototype.方法名，而不是Object.prototype</div><div class="line">主要是用来避免重写定义原型prototype对象</div><div class="line">*/</div><div class="line">Car.prototype.output= <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.model + <span class="string">"走了"</span> + <span class="keyword">this</span>.miles + <span class="string">"公里"</span>;</div><div class="line">};</div><div class="line"></div><div class="line"><span class="keyword">var</span> tom = <span class="keyword">new</span> Car(<span class="string">"大叔"</span>, <span class="number">2009</span>, <span class="number">20000</span>);</div><div class="line"><span class="keyword">var</span> dudu = <span class="keyword">new</span> Car(<span class="string">"Dudu"</span>, <span class="number">2010</span>, <span class="number">5000</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(tom.output());</div><div class="line"><span class="built_in">console</span>.log(dudu.output());</div></pre></td></tr></table></figure>
+
+<p>注：如果不适用new直接调用函数的话，this指向的是全局对象window（可以使用typeof验证）</p>
 
       
     </div>
@@ -249,18 +237,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/03/10/reprint /" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/03/29/BuilderPattern/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">&lt;</strong>
       <div class="article-nav-title">
         
-          不错的文章，有横扫千军感觉
+          JavaScript设计模式——设计模式之建造者模式
         
       </div>
     </a>
   
   
-    <a href="/2015/01/06/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2015/03/28/Singleton/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript设计模式——单例模式</div>
       <strong class="article-nav-caption">&gt;</strong>
     </a>
   
@@ -289,7 +277,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="target" data-title="新的一年（2015年）" data-url="http://kanzhe123.github.io/2015/01/18/target/"></div>
+	<div class="ds-thread" data-thread-key="constructed" data-title="JavaScript设计模式——构造函数模式" data-url="http://kanzhe123.github.io/2015/03/28/constructed/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

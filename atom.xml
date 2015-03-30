@@ -4,7 +4,7 @@
   <subtitle><![CDATA[似山脚达酪迩...]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://kanzhe123.github.io/"/>
-  <updated>2015-03-27T00:45:40.826Z</updated>
+  <updated>2015-03-30T11:03:50.628Z</updated>
   <id>http://kanzhe123.github.io/</id>
   
   <author>
@@ -13,6 +13,80 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[JavaScript设计模式——设计模式之建造者模式]]></title>
+    <link href="http://kanzhe123.github.io/2015/03/29/BuilderPattern/"/>
+    <id>http://kanzhe123.github.io/2015/03/29/BuilderPattern/</id>
+    <published>2015-03-29T13:40:25.000Z</published>
+    <updated>2015-03-30T08:00:34.079Z</updated>
+    <content type="html"><![CDATA[<p>建造者模式可以将一个复杂对象的构建与其表示相分离，使得同样的构建过程可以创建不同的表示。也就是说如果我们用了建造者模式，那么用户就需要指定需要建造的类型就可以得到它们，而具体建造的过程和细节就不需要知道了…<br><a id="more"></a></p>
+<h2 id="实例">实例</h2>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">getBeerById</span><span class="params">(id, callback)</span> </span>{</div><div class="line">    <span class="comment">// 使用ID来请求数据，然后返回数据.</span></div><div class="line">    asyncRequest(<span class="string">'GET'</span>, <span class="string">'beer.uri?id='</span> + id, <span class="function"><span class="keyword">function</span> <span class="params">(resp)</span> </span>{</div><div class="line">        <span class="comment">// callback调用 response</span></div><div class="line">        callback(resp.responseText);</div><div class="line">    });</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">var</span> el = <span class="built_in">document</span>.querySelector(<span class="string">'#test'</span>);</div><div class="line">el.addEventListener(<span class="string">'click'</span>, getBeerByIdBridge, <span class="literal">false</span>);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getBeerByIdBridge</span><span class="params">(e)</span> </span>{</div><div class="line">    getBeerById(<span class="keyword">this</span>.id, <span class="function"><span class="keyword">function</span> <span class="params">(beer)</span> </span>{</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'Requested Beer: '</span> + beer);</div><div class="line">    });</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>根据建造者的定义，表相即是回调，也就是说获取数据以后如何显示和处理取决于回调函数，相应地回调函数在处理数据的时候不需要关注是如何获取数据的，同样的例子也可以在jquery的ajax方法里看到，有很多回调函数（比如success, error回调等），主要目的就是职责分离。<br><strong>总结</strong>：建造者模式主要用于“分步骤构建一个复杂的对象”，在这其中“分步骤”是一个稳定的算法，而复杂对象的各个部分则经常变化，其优点是：建造者模式的“加工工艺”是暴露的，这样使得建造者模式更加灵活，并且建造者模式解耦了组装过程和创建具体部件，使得我们不用去关心每个部件是如何组装的。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>建造者模式可以将一个复杂对象的构建与其表示相分离，使得同样的构建过程可以创建不同的表示。也就是说如果我们用了建造者模式，那么用户就需要指定需要建造的类型就可以得到它们，而具体建造的过程和细节就不需要知道了…<br>]]>
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://kanzhe123.github.io/tags/javascript/"/>
+    
+      <category term="设计模式" scheme="http://kanzhe123.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="技术类" scheme="http://kanzhe123.github.io/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[JavaScript设计模式——构造函数模式]]></title>
+    <link href="http://kanzhe123.github.io/2015/03/28/constructed/"/>
+    <id>http://kanzhe123.github.io/2015/03/28/constructed/</id>
+    <published>2015-03-28T14:25:53.000Z</published>
+    <updated>2015-03-30T08:00:36.093Z</updated>
+    <content type="html"><![CDATA[<p>构造函数用于创建特定类型的对象——不仅声明了使用的对象，构造函数还可以接受参数以便第一次创建对象的时候设置对象的成员值。你可以自定义自己的构造函数，然后在里面声明自定义类型对象的属性或方法。<br><a id="more"></a></p>
+<h2 id="实例">实例</h2>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Car</span><span class="params">(model, year, miles)</span> </span>{</div><div class="line">    <span class="keyword">this</span>.model = model;</div><div class="line">    <span class="keyword">this</span>.year = year;</div><div class="line">    <span class="keyword">this</span>.miles = miles;</div><div class="line">    <span class="keyword">this</span>.output: <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'hello world'</span>);</div><div class="line">    }</div><div class="line">    <span class="comment">//首先是使用继承很麻烦了，其次output()在每次创建对象的时候都重新定义了，最好的方法是让所有Car类型的实例都共享这个output()方法，这样如果有大批量的实例的话，就会节约很多内存。(建议使用原型链)</span></div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line">注意：这里我们使用了Object.prototype.方法名，而不是Object.prototype</div><div class="line">主要是用来避免重写定义原型prototype对象</div><div class="line">*/</div><div class="line">Car.prototype.output= <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.model + <span class="string">"走了"</span> + <span class="keyword">this</span>.miles + <span class="string">"公里"</span>;</div><div class="line">};</div><div class="line"></div><div class="line"><span class="keyword">var</span> tom = <span class="keyword">new</span> Car(<span class="string">"大叔"</span>, <span class="number">2009</span>, <span class="number">20000</span>);</div><div class="line"><span class="keyword">var</span> dudu = <span class="keyword">new</span> Car(<span class="string">"Dudu"</span>, <span class="number">2010</span>, <span class="number">5000</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(tom.output());</div><div class="line"><span class="built_in">console</span>.log(dudu.output());</div></pre></td></tr></table></figure>
+
+<p>注：如果不适用new直接调用函数的话，this指向的是全局对象window（可以使用typeof验证）</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>构造函数用于创建特定类型的对象——不仅声明了使用的对象，构造函数还可以接受参数以便第一次创建对象的时候设置对象的成员值。你可以自定义自己的构造函数，然后在里面声明自定义类型对象的属性或方法。<br>]]>
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://kanzhe123.github.io/tags/javascript/"/>
+    
+      <category term="设计模式" scheme="http://kanzhe123.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="技术类" scheme="http://kanzhe123.github.io/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[JavaScript设计模式——单例模式]]></title>
+    <link href="http://kanzhe123.github.io/2015/03/28/Singleton/"/>
+    <id>http://kanzhe123.github.io/2015/03/28/Singleton/</id>
+    <published>2015-03-28T13:40:53.000Z</published>
+    <updated>2015-03-30T08:09:05.150Z</updated>
+    <content type="html"><![CDATA[<p>单例就是保证一个类只有一个实例，实现的方法一般是先判断实例存在与否，如果存在直接返回，如果不存在就创建了再返回，这就确保了一个类只有一个实例对象。在JavaScript里，单例作为一个命名空间提供者，从全局命名空间里提供一个唯一的访问点来访问该对象。单例一般是用在系统间各种模式的通信协调上;<br><a id="more"></a></p>
+<h2 id="实例">实例</h2>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Singleton = (<span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{</div><div class="line">    <span class="keyword">var</span> instantiated;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">init</span><span class="params">()</span> </span>{</div><div class="line">        <span class="comment">/*这里定义单例代码*/</span></div><div class="line">        <span class="keyword">return</span> {</div><div class="line">            publicMethod: <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{</div><div class="line">            	privteMethod();</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">'hello world'</span>);</div><div class="line">            },</div><div class="line">            publicProperty: <span class="string">'test'</span></div><div class="line">        };</div><div class="line">    }</div><div class="line"></div><div class="line">	<span class="comment">/*私有方法*/</span></div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">privteMethod</span><span class="params">()</span></span>{</div><div class="line">		<span class="built_in">console</span>.log(<span class="string">"this is a privteMethod!"</span>);</div><div class="line">	}</div><div class="line"></div><div class="line">    <span class="keyword">return</span> {</div><div class="line">        getInstance: <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{</div><div class="line">            <span class="keyword">if</span> (!instantiated) {</div><div class="line">                instantiated = init();</div><div class="line">            }</div><div class="line">            <span class="keyword">return</span> instantiated;</div><div class="line">        }</div><div class="line">    };</div><div class="line">})();</div><div class="line"></div><div class="line"><span class="comment">/*调用公有的方法来获取实例:*/</span></div><div class="line">Singleton.getInstance().publicMethod();</div></pre></td></tr></table></figure>
+
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>单例就是保证一个类只有一个实例，实现的方法一般是先判断实例存在与否，如果存在直接返回，如果不存在就创建了再返回，这就确保了一个类只有一个实例对象。在JavaScript里，单例作为一个命名空间提供者，从全局命名空间里提供一个唯一的访问点来访问该对象。单例一般是用在系统间各种模式的通信协调上;<br>]]>
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://kanzhe123.github.io/tags/javascript/"/>
+    
+      <category term="设计模式" scheme="http://kanzhe123.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="技术类" scheme="http://kanzhe123.github.io/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[前端开发面试知识点总结]]></title>

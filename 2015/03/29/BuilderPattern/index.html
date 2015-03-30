@@ -3,21 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>新的一年（2015年） | Hlwang</title>
+  <title>JavaScript设计模式——设计模式之建造者模式 | Hlwang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2014~2015
-2014已经走了有一段时间了，以前都没有怎么总结、规划过，过的浑浑噩噩的；那就从现在开始吧…好像到了一年的结尾大家都会对自己过去的一年做一些回顾或总结，问问自己这一年都做了什么？收获了什么？是否达到你设定的目标？对于过去的一年你是否满意……..">
+  <meta name="description" content="建造者模式可以将一个复杂对象的构建与其表示相分离，使得同样的构建过程可以创建不同的表示。也就是说如果我们用了建造者模式，那么用户就需要指定需要建造的类型就可以得到它们，而具体建造的过程和细节就不需要知道了…">
 <meta property="og:type" content="article">
-<meta property="og:title" content="新的一年（2015年）">
-<meta property="og:url" content="http://kanzhe123.github.io/2015/01/18/target/">
+<meta property="og:title" content="JavaScript设计模式——设计模式之建造者模式">
+<meta property="og:url" content="http://kanzhe123.github.io/2015/03/29/BuilderPattern/">
 <meta property="og:site_name" content="Hlwang">
-<meta property="og:description" content="2014~2015
-2014已经走了有一段时间了，以前都没有怎么总结、规划过，过的浑浑噩噩的；那就从现在开始吧…好像到了一年的结尾大家都会对自己过去的一年做一些回顾或总结，问问自己这一年都做了什么？收获了什么？是否达到你设定的目标？对于过去的一年你是否满意……..">
-<meta property="og:image" content="http://ww4.sinaimg.cn/large/005yyi5Jjw1eoduu103imj30j50d6dhh.jpg">
+<meta property="og:description" content="建造者模式可以将一个复杂对象的构建与其表示相分离，使得同样的构建过程可以创建不同的表示。也就是说如果我们用了建造者模式，那么用户就需要指定需要建造的类型就可以得到它们，而具体建造的过程和细节就不需要知道了…">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="新的一年（2015年）">
-<meta name="twitter:description" content="2014~2015
-2014已经走了有一段时间了，以前都没有怎么总结、规划过，过的浑浑噩噩的；那就从现在开始吧…好像到了一年的结尾大家都会对自己过去的一年做一些回顾或总结，问问自己这一年都做了什么？收获了什么？是否达到你设定的目标？对于过去的一年你是否满意……..">
+<meta name="twitter:title" content="JavaScript设计模式——设计模式之建造者模式">
+<meta name="twitter:description" content="建造者模式可以将一个复杂对象的构建与其表示相分离，使得同样的构建过程可以创建不同的表示。也就是说如果我们用了建造者模式，那么用户就需要指定需要建造的类型就可以得到它们，而具体建造的过程和细节就不需要知道了…">
 
   
     <link rel="alternative" href="/atom.xml" title="Hlwang" type="application/atom+xml">
@@ -191,19 +187,19 @@
 		</header>				
 	</div>
 </nav>
-      <article id="post-target" class="article article-type-post" itemscope itemprop="blogPost">
+      <article id="post-BuilderPattern" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/01/18/target/" class="article-date">
-  	<time datetime="2015-01-18T10:11:25.000Z" itemprop="datePublished">Jan 18 2015</time>
+      <a href="/2015/03/29/BuilderPattern/" class="article-date">
+  	<time datetime="2015-03-29T13:40:25.000Z" itemprop="datePublished">Mar 29 2015</time>
 </a>
       
   <div class="article-category">
-    <a class="article-category-link" href="/categories/生活类/">生活类</a>
+    <a class="article-category-link" href="/categories/技术类/">技术类</a>
   </div>
 
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/规划/">规划</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闲扯/">闲扯</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
 
     </div>
   
@@ -216,7 +212,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      新的一年（2015年）
+      JavaScript设计模式——设计模式之建造者模式
     </h1>
   
 
@@ -224,19 +220,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="2014~2015"><strong>2014~2015</strong></h1>
-<p><img src="http://ww4.sinaimg.cn/large/005yyi5Jjw1eoduu103imj30j50d6dhh.jpg" alt="2014~2015"><br>2014已经走了有一段时间了，以前都没有怎么总结、规划过，过的浑浑噩噩的；那就从现在开始吧…<br>好像到了一年的结尾大家都会对自己过去的一年做一些回顾或总结，问问自己这一年都做了什么？收获了什么？是否达到你设定的目标？对于过去的一年你是否满意……..<br><a id="more"></a></p>
-<h2 id="“回顾2014”">“回顾2014”</h2>
-<p>“收获”、”责任”、”迷茫”,2014年六个字应该差不多了吧!</p>
-<p><strong>收获</strong>：买了房子、谈了恋爱、有了正式的工作…<br><strong>责任</strong>：房贷、工作、学习、家人…<br><strong>迷茫</strong>：感觉现在的生活不是自己想要的，工作过于单调，不想就这样过完人生的头三十年…</p>
-<h2 id="“2015年需要做的事”">“2015年需要做的事”</h2>
-<ul>
-<li>上半年把车学了</li>
-<li>工作中要积极主动，学习、交流、问…</li>
-<li>坚持晚上睡觉前读书，即使现在没有这样的好习惯：习惯的力量、自控力、深入浅出Node.js（后续会更新）</li>
-<li>寻找自己的价值所在，规划一下自我；</li>
-<li>照顾好我爱、爱我的人、强健体魄…</li>
-</ul>
+        <p>建造者模式可以将一个复杂对象的构建与其表示相分离，使得同样的构建过程可以创建不同的表示。也就是说如果我们用了建造者模式，那么用户就需要指定需要建造的类型就可以得到它们，而具体建造的过程和细节就不需要知道了…<br><a id="more"></a></p>
+<h2 id="实例">实例</h2>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">getBeerById</span><span class="params">(id, callback)</span> </span>{</div><div class="line">    <span class="comment">// 使用ID来请求数据，然后返回数据.</span></div><div class="line">    asyncRequest(<span class="string">'GET'</span>, <span class="string">'beer.uri?id='</span> + id, <span class="function"><span class="keyword">function</span> <span class="params">(resp)</span> </span>{</div><div class="line">        <span class="comment">// callback调用 response</span></div><div class="line">        callback(resp.responseText);</div><div class="line">    });</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">var</span> el = <span class="built_in">document</span>.querySelector(<span class="string">'#test'</span>);</div><div class="line">el.addEventListener(<span class="string">'click'</span>, getBeerByIdBridge, <span class="literal">false</span>);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getBeerByIdBridge</span><span class="params">(e)</span> </span>{</div><div class="line">    getBeerById(<span class="keyword">this</span>.id, <span class="function"><span class="keyword">function</span> <span class="params">(beer)</span> </span>{</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'Requested Beer: '</span> + beer);</div><div class="line">    });</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>根据建造者的定义，表相即是回调，也就是说获取数据以后如何显示和处理取决于回调函数，相应地回调函数在处理数据的时候不需要关注是如何获取数据的，同样的例子也可以在jquery的ajax方法里看到，有很多回调函数（比如success, error回调等），主要目的就是职责分离。<br><strong>总结</strong>：建造者模式主要用于“分步骤构建一个复杂的对象”，在这其中“分步骤”是一个稳定的算法，而复杂对象的各个部分则经常变化，其优点是：建造者模式的“加工工艺”是暴露的，这样使得建造者模式更加灵活，并且建造者模式解耦了组装过程和创建具体部件，使得我们不用去关心每个部件是如何组装的。</p>
 
       
     </div>
@@ -249,18 +237,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/03/10/reprint /" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">&lt;</strong>
-      <div class="article-nav-title">
-        
-          不错的文章，有横扫千军感觉
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/01/06/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2015/03/28/constructed/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript设计模式——构造函数模式</div>
       <strong class="article-nav-caption">&gt;</strong>
     </a>
   
@@ -289,7 +268,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="target" data-title="新的一年（2015年）" data-url="http://kanzhe123.github.io/2015/01/18/target/"></div>
+	<div class="ds-thread" data-thread-key="BuilderPattern" data-title="JavaScript设计模式——设计模式之建造者模式" data-url="http://kanzhe123.github.io/2015/03/29/BuilderPattern/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
