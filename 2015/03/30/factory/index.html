@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JavaScript设计模式——工厂模式 | Hlwang</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="与创建型模式类似，工厂模式创建对象（视为工厂里的产品）时无需指定创建对象的具体类。
+工厂模式定义一个用于创建对象的接口，这个接口由子类决定实例化哪一个类。该模式使一个类的实例化延迟到了子类。而子类可以重写接口方法以便创建的时候指定自己的对象类型。
+这个模式十分有用，尤其是创建对象的流程赋值的时候，比如依赖于很多设置文件等。并且，你会经常在程序里看到工厂方法，用于让子类类定义需要创建的对象类型。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript设计模式——工厂模式">
+<meta property="og:url" content="http://kanzhe123.github.io/2015/03/30/factory/">
+<meta property="og:site_name" content="Hlwang">
+<meta property="og:description" content="与创建型模式类似，工厂模式创建对象（视为工厂里的产品）时无需指定创建对象的具体类。
+工厂模式定义一个用于创建对象的接口，这个接口由子类决定实例化哪一个类。该模式使一个类的实例化延迟到了子类。而子类可以重写接口方法以便创建的时候指定自己的对象类型。
+这个模式十分有用，尤其是创建对象的流程赋值的时候，比如依赖于很多设置文件等。并且，你会经常在程序里看到工厂方法，用于让子类类定义需要创建的对象类型。">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript设计模式——工厂模式">
+<meta name="twitter:description" content="与创建型模式类似，工厂模式创建对象（视为工厂里的产品）时无需指定创建对象的具体类。
+工厂模式定义一个用于创建对象的接口，这个接口由子类决定实例化哪一个类。该模式使一个类的实例化延迟到了子类。而子类可以重写接口方法以便创建的时候指定自己的对象类型。
+这个模式十分有用，尤其是创建对象的流程赋值的时候，比如依赖于很多设置文件等。并且，你会经常在程序里看到工厂方法，用于让子类类定义需要创建的对象类型。">
+
+  
+    <link rel="alternative" href="/atom.xml" title="Hlwang" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  
+
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<div class="profilepic">
+			<img src="https://avatars0.githubusercontent.com/u/6846128?v=3&amp;s=460">
+		</div>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Mr Hlwang</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">似山脚达酪迩...</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/kanzhe123" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/2074842333/profile?topnav=1&wvr=6" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+								<a class="facebook" target="_blank" href="/#" title="facebook">facebook</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud">
+						<a href="/tags/hexo/" style="font-size: 15.00px;">hexo</a><a href="/tags/javascript/" style="font-size: 20.00px;">javascript</a><a href="/tags/工作/" style="font-size: 10.00px;">工作</a><a href="/tags/心情/" style="font-size: 10.00px;">心情</a><a href="/tags/文章/" style="font-size: 10.00px;">文章</a><a href="/tags/规划/" style="font-size: 10.00px;">规划</a><a href="/tags/设计模式/" style="font-size: 20.00px;">设计模式</a><a href="/tags/转载/" style="font-size: 10.00px;">转载</a><a href="/tags/闲扯/" style="font-size: 10.00px;">闲扯</a><a href="/tags/面试/" style="font-size: 10.00px;">面试</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://yywang.info/">王岩岩的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://aharsenal.sinaapp.com/">杨小友的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.ihehong.com">何虹的博客</a>
+			        
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay"></div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="https://avatars0.githubusercontent.com/u/6846128?v=3&amp;s=460">
+			</div>
+
+			<hgroup>
+			  <h1 class="header-author"><a href="/">Mr Hlwang</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">似山脚达酪迩...</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/kanzhe123" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/2074842333/profile?topnav=1&wvr=6" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+						<a class="facebook" target="_blank" href="/#" title="facebook">facebook</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <article id="post-factory" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/03/30/factory/" class="article-date">
+  	<time datetime="2015-03-30T11:51:17.000Z" itemprop="datePublished">Mar 30 2015</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/技术类/">技术类</a>
+  </div>
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaScript设计模式——工厂模式
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>与创建型模式类似，工厂模式创建对象（视为工厂里的产品）时无需指定创建对象的具体类。</p>
+<p>工厂模式定义一个用于创建对象的接口，这个接口由子类决定实例化哪一个类。该模式使一个类的实例化延迟到了子类。而子类可以重写接口方法以便创建的时候指定自己的对象类型。</p>
+<p>这个模式十分有用，尤其是创建对象的流程赋值的时候，比如依赖于很多设置文件等。并且，你会经常在程序里看到工厂方法，用于让子类类定义需要创建的对象类型。<br><a id="more"></a></p>
+<h2 id="实例">实例</h2>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> page = page || {};</div><div class="line">page.dom = page.dom || {};</div><div class="line"><span class="comment">//子函数1：处理文本</span></div><div class="line">page.dom.Text = <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{</div><div class="line">    <span class="keyword">this</span>.insert = <span class="function"><span class="keyword">function</span> <span class="params">(where)</span> </span>{</div><div class="line">        <span class="keyword">var</span> txt = <span class="built_in">document</span>.createTextNode(<span class="keyword">this</span>.url);</div><div class="line">        where.appendChild(txt);</div><div class="line">    };</div><div class="line">};</div><div class="line"></div><div class="line"><span class="comment">//子函数2：处理链接</span></div><div class="line">page.dom.Link = <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{</div><div class="line">    <span class="keyword">this</span>.insert = <span class="function"><span class="keyword">function</span> <span class="params">(where)</span> </span>{</div><div class="line">        <span class="keyword">var</span> link = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);</div><div class="line">        link.href = <span class="keyword">this</span>.url;</div><div class="line">        link.appendChild(<span class="built_in">document</span>.createTextNode(<span class="keyword">this</span>.url));</div><div class="line">        where.appendChild(link);</div><div class="line">    };</div><div class="line">};</div><div class="line"></div><div class="line"><span class="comment">//子函数3：处理图片</span></div><div class="line">page.dom.Image = <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{</div><div class="line">    <span class="keyword">this</span>.insert = <span class="function"><span class="keyword">function</span> <span class="params">(where)</span> </span>{</div><div class="line">        <span class="keyword">var</span> im = <span class="built_in">document</span>.createElement(<span class="string">'img'</span>);</div><div class="line">        im.src = <span class="keyword">this</span>.url;</div><div class="line">        where.appendChild(im);</div><div class="line">    };</div><div class="line">};</div></pre></td></tr></table></figure>
+
+<p>那么我们如何定义工厂处理函数呢？其实很简单：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">page.dom.factory = <span class="function"><span class="keyword">function</span> <span class="params">(type)</span> </span>{</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> page.dom[type];</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>使用方式如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o = page.dom.factory(<span class="string">'Link'</span>);</div><div class="line">o.url = <span class="string">'http://www.cnblogs.com'</span>;</div><div class="line">o.insert(<span class="built_in">document</span>.body);</div></pre></td></tr></table></figure>
+
+<h2 id="总结：">总结：</h2>
+<p><strong>什么时候使用工厂模式</strong></p>
+<p>以下几种情景下工厂模式特别有用：</p>
+<p>对象的构建十分复杂<br>需要依赖具体环境创建不同实例<br>处理大量具有相同属性的小对象</p>
+<p><strong>什么时候不该用工厂模式</strong></p>
+<p>不滥用运用工厂模式，有时候仅仅只是给代码增加了不必要的复杂度，同时使得测试难以运行下去。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/03/29/BuilderPattern/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript设计模式——建造者模式</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="factory" data-title="JavaScript设计模式——工厂模式" data-url="http://kanzhe123.github.io/2015/03/30/factory/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Mr Hlwang
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+  <script src="/js/main.js" type="text/javascript"></script>
+
+
+  </div>
+</body>
+</html>
