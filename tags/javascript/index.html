@@ -117,7 +117,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud">
-						<a href="/tags/hexo/" style="font-size: 15.00px;">hexo</a><a href="/tags/javascript/" style="font-size: 20.00px;">javascript</a><a href="/tags/工作/" style="font-size: 10.00px;">工作</a><a href="/tags/心情/" style="font-size: 10.00px;">心情</a><a href="/tags/文章/" style="font-size: 10.00px;">文章</a><a href="/tags/规划/" style="font-size: 10.00px;">规划</a><a href="/tags/设计模式/" style="font-size: 20.00px;">设计模式</a><a href="/tags/转载/" style="font-size: 10.00px;">转载</a><a href="/tags/闲扯/" style="font-size: 10.00px;">闲扯</a><a href="/tags/面试/" style="font-size: 10.00px;">面试</a>
+						<a href="/tags/hexo/" style="font-size: 15.00px;">hexo</a><a href="/tags/javascript/" style="font-size: 20.00px;">javascript</a><a href="/tags/工作/" style="font-size: 10.00px;">工作</a><a href="/tags/工厂模式/" style="font-size: 10.00px;">工厂模式</a><a href="/tags/心情/" style="font-size: 10.00px;">心情</a><a href="/tags/文章/" style="font-size: 10.00px;">文章</a><a href="/tags/组合模式/" style="font-size: 10.00px;">组合模式</a><a href="/tags/观察者模式/" style="font-size: 10.00px;">观察者模式</a><a href="/tags/规划/" style="font-size: 10.00px;">规划</a><a href="/tags/设计模式/" style="font-size: 20.00px;">设计模式</a><a href="/tags/转载/" style="font-size: 10.00px;">转载</a><a href="/tags/闲扯/" style="font-size: 10.00px;">闲扯</a><a href="/tags/面试/" style="font-size: 10.00px;">面试</a>
 					</div>
 				</section>
 				
@@ -189,6 +189,121 @@
 </nav>
       
   
+    <article id="post-Observer" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/04/03/Observer/" class="article-date">
+  	<time datetime="2015-04-03T06:40:37.000Z" itemprop="datePublished">Apr 3 2015</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/技术类/">技术类</a>
+  </div>
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/观察者模式/">观察者模式</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/03/Observer/">JavaScript设计模式——观察者模式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>观察者模式又叫发布订阅模式（Publish/Subscribe），它定义了一种一对多的关系，让多个观察者对象同时监听某一个主题对象，这个主题对象的状态发生变化时就会通知所有的观察者对象，使得它们能够自动更新自己。</p>
+<p>使用观察者模式的好处：</p>
+<p>支持简单的广播通信，自动通知所有已经订阅过的对象。<br>页面载入后目标对象很容易与观察者存在一种动态关联，增加了灵活性。<br>目标对象与观察者之间的抽象耦合关系能够单独扩展以及重用。</p>
+
+        
+          <p class="article-more-link">
+            <a href="/2015/04/03/Observer/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-Composite" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/04/02/Composite/" class="article-date">
+  	<time datetime="2015-04-02T14:35:53.000Z" itemprop="datePublished">Apr 2 2015</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/技术类/">技术类</a>
+  </div>
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/组合模式/">组合模式</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/02/Composite/">JavaScript设计模式——组合模式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>组合模式（Composite）将对象组合成树形结构以表示“部分-整体”的层次结构，组合模式使得用户对单个对象和组合对象的使用具有一致性。</p>
+<p>组合模式的使用场景：</p>
+<p>你想表示对象的部分-整体层次结构时；<br>你希望用户忽略组合对象和单个对象的不同，用户将统一地使用组合结构中的所有对象（方法）<br>另外该模式经常和装饰者一起使用，它们通常有一个公共的父类（也就是原型），因此装饰必须支持具有add、remove、getChild操作的 component接口。<br>
+        
+          <p class="article-more-link">
+            <a href="/2015/04/02/Composite/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
     <article id="post-factory" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -201,7 +316,7 @@
   </div>
 
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工厂模式/">工厂模式</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
 
     </div>
   
@@ -356,61 +471,10 @@
 
 
   
-    <article id="post-Singleton" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2015/03/28/Singleton/" class="article-date">
-  	<time datetime="2015-03-28T13:40:53.000Z" itemprop="datePublished">Mar 28 2015</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/技术类/">技术类</a>
-  </div>
-
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/28/Singleton/">JavaScript设计模式——单例模式</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>单例就是保证一个类只有一个实例，实现的方法一般是先判断实例存在与否，如果存在直接返回，如果不存在就创建了再返回，这就确保了一个类只有一个实例对象。在JavaScript里，单例作为一个命名空间提供者，从全局命名空间里提供一个唯一的访问点来访问该对象。单例一般是用在系统间各种模式的通信协调上;<br>
-        
-          <p class="article-more-link">
-            <a href="/2015/03/28/Singleton/#more">more >></a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/tags/javascript/page/2/">2</a><a class="extend next" rel="next" href="/tags/javascript/page/2/">Next &raquo;</a>
+    </nav>
   
 
       <footer id="footer">

@@ -2,8 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://kanzhe123.github.io/2015/04/02/Composite/</loc>
+    <lastmod>2015-04-03T06:57:06.771Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kanzhe123.github.io/2015/04/03/Observer/</loc>
+    <lastmod>2015-04-03T06:51:37.437Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kanzhe123.github.io/2015/03/30/factory/</loc>
-    <lastmod>2015-03-30T11:55:23.552Z</lastmod>
+    <lastmod>2015-04-03T06:46:37.406Z</lastmod>
   </url>
   
   <url>
