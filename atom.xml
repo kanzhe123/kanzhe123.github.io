@@ -4,7 +4,7 @@
   <subtitle><![CDATA[似山脚达酪迩...]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://kanzhe123.github.io/"/>
-  <updated>2015-04-08T10:47:38.834Z</updated>
+  <updated>2015-04-15T01:54:57.830Z</updated>
   <id>http://kanzhe123.github.io/</id>
   
   <author>
@@ -13,6 +13,32 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Js实现组合键功能]]></title>
+    <link href="http://kanzhe123.github.io/2015/04/15/KeyCombination/"/>
+    <id>http://kanzhe123.github.io/2015/04/15/KeyCombination/</id>
+    <published>2015-04-15T01:32:43.000Z</published>
+    <updated>2015-04-15T01:52:58.362Z</updated>
+    <content type="html"><![CDATA[<p>你可以通过js事件的event对象的keyCode获得按键对应key值，keyCode会返回一个按键代码，但是对于ctrl这类修饰健，event有另外的方法去判断是否同时按下了修饰键。例如Ctrl键可以通过 event.ctrlKey 方法获取，返回true或false。<br><a id="more"></a></p>
+<h2 id="写个实例">写个实例</h2>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//监听Ctrl+Q组合键</span></div><div class="line">$(<span class="built_in">document</span>).ready(  </div><div class="line">    <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{  </div><div class="line">        <span class="built_in">document</span>.onkeydown = <span class="function"><span class="keyword">function</span><span class="params">()</span>  </span></div><div class="line">        {  </div><div class="line">            <span class="keyword">var</span> oEvent = <span class="built_in">window</span>.event;  </div><div class="line">            <span class="keyword">if</span> (oEvent.keyCode == <span class="number">81</span> && oEvent.ctrlKey) {  </div><div class="line">                alert(<span class="string">"你按下了ctrl+enter"</span>);  </div><div class="line">            }  </div><div class="line">        }  </div><div class="line">    }  </div><div class="line">);</div></pre></td></tr></table></figure>
+
+<h2 id="附上event事件">附上event事件</h2>
+<p><img src="http://i2.tietuku.com/8eb4656c233e7da8.png" alt="KeyboardEvent"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>你可以通过js事件的event对象的keyCode获得按键对应key值，keyCode会返回一个按键代码，但是对于ctrl这类修饰健，event有另外的方法去判断是否同时按下了修饰键。例如Ctrl键可以通过 event.ctrlKey 方法获取，返回true或false。<br>]]>
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://kanzhe123.github.io/tags/javascript/"/>
+    
+      <category term="keycode" scheme="http://kanzhe123.github.io/tags/keycode/"/>
+    
+      <category term="技术类" scheme="http://kanzhe123.github.io/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[《看见》语录]]></title>

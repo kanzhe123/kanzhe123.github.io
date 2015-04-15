@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: hexo | Hlwang</title>
+  <title>Js实现组合键功能 | Hlwang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="生活 IT 技术 扯淡 杂耍 ...">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hlwang">
-<meta property="og:url" content="http://kanzhe123.github.io/tags/hexo/">
+  <meta name="description" content="你可以通过js事件的event对象的keyCode获得按键对应key值，keyCode会返回一个按键代码，但是对于ctrl这类修饰健，event有另外的方法去判断是否同时按下了修饰键。例如Ctrl键可以通过 event.ctrlKey 方法获取，返回true或false。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Js实现组合键功能">
+<meta property="og:url" content="http://kanzhe123.github.io/2015/04/15/KeyCombination/">
 <meta property="og:site_name" content="Hlwang">
-<meta property="og:description" content="生活 IT 技术 扯淡 杂耍 ...">
+<meta property="og:description" content="你可以通过js事件的event对象的keyCode获得按键对应key值，keyCode会返回一个按键代码，但是对于ctrl这类修饰健，event有另外的方法去判断是否同时按下了修饰键。例如Ctrl键可以通过 event.ctrlKey 方法获取，返回true或false。">
+<meta property="og:image" content="http://i2.tietuku.com/8eb4656c233e7da8.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hlwang">
-<meta name="twitter:description" content="生活 IT 技术 扯淡 杂耍 ...">
+<meta name="twitter:title" content="Js实现组合键功能">
+<meta name="twitter:description" content="你可以通过js事件的event对象的keyCode获得按键对应key值，keyCode会返回一个按键代码，但是对于ctrl这类修饰健，event有另外的方法去判断是否同时按下了修饰键。例如Ctrl键可以通过 event.ctrlKey 方法获取，返回true或false。">
 
   
     <link rel="alternative" href="/atom.xml" title="Hlwang" type="application/atom+xml">
@@ -187,13 +188,11 @@
 		</header>				
 	</div>
 </nav>
-      
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <article id="post-KeyCombination" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/01/06/hello-world/" class="article-date">
-  	<time datetime="2015-01-06T07:44:53.000Z" itemprop="datePublished">Jan 6 2015</time>
+      <a href="/2015/04/15/KeyCombination/" class="article-date">
+  	<time datetime="2015-04-15T01:32:43.000Z" itemprop="datePublished">Apr 15 2015</time>
 </a>
       
   <div class="article-category">
@@ -201,7 +200,7 @@
   </div>
 
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/keycode/">keycode</a></li></ul>
 
     </div>
   
@@ -213,8 +212,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/06/hello-world/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      Js实现组合键功能
     </h1>
   
 
@@ -222,17 +221,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+        <p>你可以通过js事件的event对象的keyCode获得按键对应key值，keyCode会返回一个按键代码，但是对于ctrl这类修饰健，event有另外的方法去判断是否同时按下了修饰键。例如Ctrl键可以通过 event.ctrlKey 方法获取，返回true或false。<br><a id="more"></a></p>
+<h2 id="写个实例">写个实例</h2>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//监听Ctrl+Q组合键</span></div><div class="line">$(<span class="built_in">document</span>).ready(  </div><div class="line">    <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{  </div><div class="line">        <span class="built_in">document</span>.onkeydown = <span class="function"><span class="keyword">function</span><span class="params">()</span>  </span></div><div class="line">        {  </div><div class="line">            <span class="keyword">var</span> oEvent = <span class="built_in">window</span>.event;  </div><div class="line">            <span class="keyword">if</span> (oEvent.keyCode == <span class="number">81</span> && oEvent.ctrlKey) {  </div><div class="line">                alert(<span class="string">"你按下了ctrl+enter"</span>);  </div><div class="line">            }  </div><div class="line">        }  </div><div class="line">    }  </div><div class="line">);</div></pre></td></tr></table></figure>
 
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a><br>
-        
-          <p class="article-more-link">
-            <a href="/2015/01/06/hello-world/#more">more >></a>
-          </p>
-        
+<h2 id="附上event事件">附上event事件</h2>
+<p><img src="http://i2.tietuku.com/8eb4656c233e7da8.png" alt="KeyboardEvent"></p>
+
       
     </div>
     <footer class="article-footer">
@@ -241,76 +236,59 @@
     </footer>
   </div>
   
-</article>
-
-
-
-
-
-
-  
-    <article id="post-HexoCreate" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/01/06/HexoCreate/" class="article-date">
-  	<time datetime="2015-01-06T07:44:53.000Z" itemprop="datePublished">Jan 6 2015</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/技术类/">技术类</a>
-  </div>
-
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/06/HexoCreate/">黑客哦（Hexo）--创建个人博客</a>
-    </h1>
   
+    <a href="/2015/04/07/see/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《看见》语录</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="hexo是什么"><strong>hexo是什么</strong></h1>
-<p><a href="http://hexo.io/" target="_blank" rel="external">hexo</a>是一个基于<a href="http://nodejs.org/" target="_blank" rel="external">Node.js</a>的静态博客程序，可以方便的生成静态网页托管在<a href="https://github.com/" target="_blank" rel="external">github</a>和<a href="https://www.heroku.com/" target="_blank" rel="external">Heroku</a>上。作者是来自台湾的<a href="https://github.com/hexojs/hexo" target="_blank" rel="external">@tommy351</a>。引用<a href="https://github.com/hexojs/hexo" target="_blank" rel="external">@tommy351</a>的话，hexo：</p>
-<blockquote>
-<p><strong>快速、简单且功能强大的 Node.js 博客框架。</strong><br>A fast, simple &amp; powerful blog framework, powered by Node.js.</p>
-</blockquote>
-<p>类似于Octopress、Wordpress，我们可以用<a href="http://hexo.io/" target="_blank" rel="external">hexo</a>创建自己的博客，托管到<a href="https://github.com/" target="_blank" rel="external">github</a>上，然后绑定自己的域名，用<a href="http://mahua.jser.me/" target="_blank" rel="external">markdown</a>写文章。本博客即使用hexo创建并托管在<a href="https://github.com/" target="_blank" rel="external">github</a>上。</p>
-
-        
-          <p class="article-more-link">
-            <a href="/2015/01/06/HexoCreate/#more">more >></a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-    </footer>
-  </div>
   
 </article>
 
 
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="KeyCombination" data-title="Js实现组合键功能" data-url="http://kanzhe123.github.io/2015/04/15/KeyCombination/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
-  
-  
+
+
 
       <footer id="footer">
   <div class="outer">
