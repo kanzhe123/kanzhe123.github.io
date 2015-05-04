@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://kanzhe123.github.io/2015/05/04/InternetThinking/</loc>
+    <lastmod>2015-05-04T08:40:47.656Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kanzhe123.github.io/2015/04/15/KeyCombination/</loc>
     <lastmod>2015-04-15T01:52:58.362Z</lastmod>
   </url>
@@ -63,6 +68,11 @@
   
   <url>
     <loc>http://kanzhe123.github.io/2015/01/06/welcome/</loc>
+    <lastmod>2015-01-06T07:57:15.791Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kanzhe123.github.io/2015/01/06/mysql_note_1/</loc>
     <lastmod>2015-01-06T07:57:15.791Z</lastmod>
   </url>
   
